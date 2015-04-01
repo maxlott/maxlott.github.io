@@ -1,0 +1,102 @@
+/******************************************************
+Exercise: Local variables and basic arithmetical operations
+
+Create two integer variables called num1 and num2 and assign them your favorite numbers.
+
+Next, compute the sum, difference, quotient, product, and modulus of these two numbers and assign these values to variables called sum, difference, quotient, product, and modulus, respectively.
+
+For the quotient, be sure to convert the variables to Floats before dividing.
+*******************************************************/
+
+
+
+//Initial solution
+
+
+using System;
+
+namespace Phase0_Exercise3_Basic_Arithmetic_Operations
+{
+  public class Exercise3BasicArithmeticOperations
+    {
+      public int num1 = 6;
+      public int num2 = 9;
+      public int sum;
+      public int difference;
+      public int product;
+      public int modulus;
+      public float quotient;
+      public float flnum1;
+      public float flnum2;
+
+      public void DoArithmeticOperations()
+      {
+        sum = num1 + num2;
+        difference = num2 - num1;
+        product = num1 * num2;
+        modulus = num1 % num2;
+        quotient = (float flnum1 = (float)num1 ) / (float flnum2 = (float)num2 )
+      }
+    }
+}
+
+
+
+// Refactored solution
+
+using System;
+
+namespace Phase0_Exercise3_Basic_Arithmetic_Operations
+{
+  public class Exercise3BasicArithmeticOperations
+    {
+      public int num1 = 6;
+      public int num2 = 9;
+      public int sum;
+      public int difference;
+      public int product;
+      public int modulus;
+      public float quotient;
+      public float flnum1;
+      public float flnum2;
+
+      public void DoArithmeticOperations()
+      {
+        sum = num1 + num2;
+        difference = num1 - num2;
+        product = num1 * num2;
+        modulus = num1 % num2;
+        float flnum1 = (float)num1;
+        float flnum2 = (float)num2;
+        quotient =  flnum1 / flnum2; 
+      }
+    }
+}
+
+
+// Refactored v2 solution (After Looking at Solution)
+
+using System;
+
+namespace Phase0_Exercise3_Basic_Arithmetic_Operations
+{
+  public class Exercise3BasicArithmeticOperations
+    {
+      public int num1 = 6;
+      public int num2 = 9;
+      public int sum;
+      public int difference;
+      public int product;
+      public int modulus;
+      public float quotient;
+   
+      public void DoArithmeticOperations()
+      {
+        sum = num1 + num2;
+        difference = num1 - num2;
+        product = num1 * num2;
+        modulus = num1 % num2;
+        quotient =  (float) num1/ (float) num2; 
+      }
+    }
+}

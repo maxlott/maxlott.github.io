@@ -1,0 +1,50 @@
+/******************************************************
+Exercise: Defining a Hashtable
+Define a Hashtable variable called myInfo which has the following keys:
+
+"FirstName"
+"LastName"
+"Hometown"
+"Age"
+Use your own personal information to fill in the keys. Make sure "Age" is a positive integer and the rest are non-empty Strings.
+
+The Hashtable needs to be stored in the myInfo variable.
+*******************************************************/
+
+
+
+
+//Initial solution
+
+using System;
+using System.Collections;
+
+namespace Phase0_Exercise12_Defining_A_Hashtable
+{
+  public class Exercise12DefiningAHashtable
+  {
+   Hashtable myInfo = new Hashtable()
+    {
+      {"FirstName, Max"}, {"LastName, Lott"}, {"Hometown, Kerikeri"}, {"Age, 20"};
+    }
+  }
+}
+
+
+
+
+// Refactored solution
+
+using System;
+using System.Collections;
+
+namespace Phase0_Exercise12_Defining_A_Hashtable
+{
+  public class Exercise12DefiningAHashtable
+  {
+   public Hashtable myInfo = new Hashtable
+    {
+      {"FirstName", "Max"}, {"LastName", "Lott"}, {"Hometown", "Kerikeri"}, {"Age", 20}
+   };
+  }
+}

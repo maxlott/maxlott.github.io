@@ -1,0 +1,49 @@
+/******************************************************
+Exercise: Simple string methods #1
+Create a public String variable called oldString and assign it the value "C# is cool".
+
+Use String methods to modify the oldString variable so that it is now "C# IS AWESOME" and assign this to another public variable called newString.
+*******************************************************/
+
+
+
+//Initial solution
+
+using System;
+
+namespace Phase0_Exercise2_Simple_String_Methods
+{
+  public class Exercise2SimpleStringMethods
+    {
+      public String oldString = "C# is Cool";
+      public String newString = "";
+    
+
+      public void changeString()
+      {
+       String oldString = "C# is AWESOME";
+       String newString = oldString;
+      }
+    }
+}
+
+
+
+// Refactored solution
+
+using System;
+
+namespace Phase0_Exercise2_Simple_String_Methods
+{
+  public class Exercise2SimpleStringMethods
+    {
+      public String oldString = "C# is cool";
+      public String newString = "";
+    
+
+      public void changeString()
+      {
+       newString = oldString.Replace("cool", "AWESOME").ToUpper();
+      }
+    }
+}

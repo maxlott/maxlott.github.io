@@ -1,0 +1,48 @@
+/******************************************************
+Exercise: Good guess?
+Create a method called GoodGuess that accepts an integer value and returns true if the input is equal to 42 and false otherwise.
+*******************************************************/
+
+
+
+// solution
+
+using System;
+
+namespace Phase0_Exercise10_Good_Guess
+{
+  public class Exercise10GoodGuess
+  {
+    public bool GoodGuess(int value)
+    {
+      if(value == 42)
+      return true;
+      
+      else
+      return false;
+    }
+  }
+}
+
+
+
+// Refactored solution
+
+using System;
+
+namespace Phase0_Exercise11_Detecting_Simple_Substrings
+{
+  public class Exercise11DetectingSimpleSubstrings
+  {
+    public String Welcome(String address)
+    {
+    if (address.Contains("CA"))
+     return "Welcome to California";
+    
+     else
+       
+     return "You should move to California";
+    }
+      
+  }
+}

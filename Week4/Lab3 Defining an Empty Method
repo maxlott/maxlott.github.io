@@ -1,0 +1,40 @@
+/**********************************************
+Exercise: Defining an empty method
+Define a method called DoSomething that accepts three parameters.
+
+You do not need to write any code in the body of the method.
+***********************************************/
+
+
+
+//Initial solution
+
+using System;
+
+namespace Phase0_Exercise4_Empty_Method
+{
+  public class Exercise4EmptyMethod
+    {
+      public DoSomething(int a, int b, int c)
+      {
+        
+      }
+    }
+}
+
+
+
+// Refactored solution
+
+using System;
+
+namespace Phase0_Exercise4_Empty_Method
+{
+  public class Exercise4EmptyMethod
+    {
+      public void DoSomething(int a, int b, int c)
+      {
+        
+      }
+    }
+}

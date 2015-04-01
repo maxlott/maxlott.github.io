@@ -1,0 +1,83 @@
+/******************************************************
+Exercise: Defining basic arithmetical methods
+Define four methods which correspond to the four basic arithmetic operations:
+
+Add
+Subtract
+Multiply
+Divide
+They should accept either integers or floating point numbers as input. divide should perform floating point division.
+
+For example,
+
+Add(10,2)      // => 12
+Subtract(10,2) // => 8
+Multiply(10,2) // => 20
+Divide(10,2)   // => 5.0 (*not* 5)
+*******************************************************/
+
+
+
+//Initial solution
+
+using System;
+
+namespace Phase0_Exercise7_Basic_Arithmetic_Methods
+{
+  public class Exercise7BasicArithmeticMethods
+  {
+    public int Add(num1, num2)
+    {
+    return num1 + num2;
+    }
+    
+    public int Sub(num1, num2)
+    {
+    return num1 - num2;
+    }
+    
+    public int Multiply(num1, num2)
+    {
+    return num1 * num2;
+    }
+    
+    public float Divide((float)num1, (float)num2)
+    {
+    return num1 / num2;
+    }
+      
+  }
+}
+
+
+
+
+// Refactored solution
+
+using System;
+
+namespace Phase0_Exercise7_Basic_Arithmetic_Methods
+{
+  public class Exercise7BasicArithmeticMethods
+  {
+    public int Add(int a, int b)
+    {
+    return a + b;
+    }
+
+    public int Subtract(int a, int b)
+    {
+    return a - b;
+    }
+
+    public int Multiply(int a, int b)
+    {
+    return a * b;
+    }
+
+    public float Divide(int a, int b)
+    {
+    return (float) a / (float) b;
+    }
+  }
+}

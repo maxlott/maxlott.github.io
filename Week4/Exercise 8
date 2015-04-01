@@ -1,0 +1,74 @@
+/******************************************************
+Exercise: Calculate a letter grade
+Create a method GetGrade that accepts an average in the class and returns the letter grade as a String.
+
+It should only return one of 'A', 'B', 'C', etc. Don't worry about + and - grades.
+
+For example,
+
+GetGrade(89) // => returns "B", *not* "B+"
+GetGrade(70) // => returns "C"
+*******************************************************/
+
+
+//Initial solution
+
+using System;
+
+namespace Phase0_Exercise8_Calculating_Letter_Grades
+{
+  public class Exercise8CalculatingLetterGrades
+  {
+    public String Grade (int num)
+    {
+      if (num > 90)
+        Grade = A;
+      
+      else if (num > 80)
+        Grade = B;
+        
+        
+      else if (Num > 70)
+        Grade = C;
+        
+	 else if (Num > 60)
+        Grade = D;
+        
+      else (Num > 50)
+        Grade = F;
+        return Grade;       
+    }
+  }
+}
+
+
+
+// Refactored solution
+
+using System;
+
+namespace Phase0_Exercise8_Calculating_Letter_Grades
+{
+  public class Exercise8CalculatingLetterGrades
+  {
+    public String GetGrade(int num)
+    {
+      String grade;
+      if (num >= 90)
+        grade = "A";
+      
+      else if (num >= 80)
+        grade = "B";
+        
+      else if (num >= 70)
+        grade = "C";
+        
+    else if (num >= 60)
+        grade = "D";
+       
+      else
+        grade = "F";
+        return grade;       
+    }
+  }
+}

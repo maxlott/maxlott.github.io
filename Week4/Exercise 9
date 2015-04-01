@@ -1,0 +1,62 @@
+/******************************************************
+Exercise: Detecting leap years
+Create a method IsLeapYear that accepts an integer representing a year as input.
+
+It should return true if the year input is a leap year and false otherwise.
+
+For example,
+
+IsLeapYear(2000) // => true
+IsLeapYear(2001) // => false
+*******************************************************/
+
+If the year is evenly divisible by 4, go to step 2. Otherwise, go to step 5.
+If the year is evenly divisible by 100, go to step 3. Otherwise, go to step 4.
+If the year is evenly divisible by 400, go to step 4. Otherwise, go to step 5.
+The year is a leap year (it has 366 days).
+The year is not a leap year (it has 365 days).
+
+Only a leap year if year evenly div by 4 && NOT evenly div by 100 && div by 400 
+
+//Initial solution
+
+using System;
+
+namespace Phase0_Exercise9_Detecting_Leap_Years
+{
+  public class Exercise9DetectingLeapYears
+  {
+    public bool IsLeapYear(int year)
+    {
+      if (year % 4 == 0 && !(year % 100) && year % 400)
+      return true;
+      else
+      return false;
+    }
+      
+  }
+}
+
+*****/files/binaries/20150401_030146346_code.cs(21,28): error CS0023: The `!' operator cannot be applied to operand of type `int'
+
+// Refactored solution
+
+using System;
+
+namespace Phase0_Exercise9_Detecting_Leap_Years
+{
+  public class Exercise9DetectingLeapYears
+  {
+    public bool IsLeapYear(int year)
+    {
+      if (year % 400 == 0)
+      return true;
+      else if (year % 100 == 0)
+      return false;
+      else if (year % 4 == 0)
+      return true;
+      else
+        return false;
+    }
+  }
+}

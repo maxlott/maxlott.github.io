@@ -1,0 +1,49 @@
+/**********************************************
+Exercise: Define a method that returns a formatted address
+Create a method called MakeAddress that accepts parameters for the street, city , country, and postcode and returns a single address string.
+
+For example if we call the method as follows:
+
+MakeAddress("769 Kowhai Road", "Wellington", "New Zealand", "4205")
+
+The return value would be
+
+"You live at 769 Kowhai Road in the beautiful city of Wellington, New Zealand. Your postcode is 4205."
+
+Note: the words your output that are not part of the method parameters must match exactly with the words in the output above.
+***********************************************/
+
+
+
+//Initial solution
+
+using System;
+
+namespace Phase0_Exercise5_Format_Address
+{
+  public class Exercise5FormatAddress
+    {
+     public String MakeAddress(String street, String city, String country, int postcode)
+     {
+       String YourAddress "You live at" + street + "in the beautiful city of" + city + "," + country + ". Your postcode is" + postcode + ".";
+     return YourAdress;
+     }
+    }
+}
+
+
+// Refactored solution
+
+using System;
+
+namespace Phase0_Exercise5_Format_Address
+{
+  public class Exercise5FormatAddress
+    {
+     public String MakeAddress(String street, String city, String country, String postcode)
+     {
+       String Address = "You live at " + street + " in the beautiful city of " + city + ", " + country + ". Your postcode is " + postcode + ".";
+     return Address;
+     }
+    }
+}

@@ -1,0 +1,52 @@
+/******************************************************
+Exercise: Detecting simple substrings
+Create a method called Welcome that accepts an address as a single string.
+
+It returns "Welcome to California" if the address includes "CA" and "You should move to California" otherwise.
+*******************************************************/
+
+
+
+
+//Initial solution
+
+using System;
+
+namespace Phase0_Exercise11_Detecting_Simple_Substrings
+{
+  public class Exercise11DetectingSimpleSubstrings
+  {
+    public String Welcome(String address)
+    {
+    if (address.Contains = "CA")
+     return "Welcome to California";
+    
+     else
+       
+     return "You should move to California";
+    }
+      
+  }
+}
+
+
+
+
+using System;
+
+namespace Phase0_Exercise11_Detecting_Simple_Substrings
+{
+  public class Exercise11DetectingSimpleSubstrings
+  {
+    public String Welcome(String address)
+    {
+    if (address.Contains("CA"))
+     return "Welcome to California";
+    
+     else
+       
+     return "You should move to California";
+    }
+      
+  }
+}

@@ -1,0 +1,29 @@
+/******************************************************
+Exercise: Concatenate two ArrayLists
+Define a method ArrayListConcat that takes two ArrayLists as arguments and returns a single ArrayList produced by concatenating the arguments.
+
+For example,
+
+ArrayListConcat for two ArrayLists [1,2,3] and [4,5,6] would result in [1,2,3,4,5,6]
+ArrayListConcat for two ArrayLists [10, 4] and ["apple"] would result in [10, 4, "apple"]
+*******************************************************/
+
+
+
+
+//Solution
+
+using System;
+using System.Collections;
+
+namespace Phase0_Exercise13_Concatenate_Two_ArrayLists
+{
+  public class Exercise13ConcatenateTwoArrayLists
+  {
+    public ArrayList ArrayListConcat(ArrayList first, ArrayList second)
+    {
+      first.AddRange(second);
+       return first;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+/******************************************************
+Exercise: Calculate the letter grade of a series of grades
+Create a method GetGrade that accepts an ArrayList of test scores. Each score in the array should be between 0 and 100, where 100 is the max score.
+
+Compute the average score and return the letter grade as a String, i.e., 'A', 'B', 'C', 'D', 'E', or 'F'.
+
+For example,
+
+# How studious!
+GetGrade for the ArrayList [100, 100, 100] should result in 'A'
+*******************************************************/
+
+
+
+//Initial solution
+
+using System;
+using System.Collections;
+
+namespace Phase0_Exercise14_Calculate_Average_Grade
+{
+  public class Exercise14CalculateAverageGrade
+  {
+    public string Grades(ArrayList scores)
+    {
+		int sum = scores.Sum;      
+        float average = (float) sum / (float) scores.Count;
+      
+      
+         String grade;
+      if (average >= 90)
+        grade = "A";
+      else if (average >= 80)
+        grade = "B";
+      else if (average >= 70)
+        grade = "C";
+      else if (average >= 60)
+        grade = "D";
+      else
+        grade = "F";
+      return grade;
+    }
+       
+  }
+}
+
+
+
+// Refactored solution (Cheated)
+
+using System;
+using System.Collections;
+
+namespace Phase0_Exercise14_Calculate_Average_Grade
+{
+  public class Exercise14CalculateAverageGrade
+  {
+    public String GetGrade(ArrayList scores)
+    {
+      int sum = 0;
+
+      foreach (int mark in scores)
+        sum += mark;
+
+      float average = (float) sum / (float) scores.Count;
+
+      String grade;
+      if (average >= 90)
+        grade = "A";
+      else if (average >= 80)
+        grade = "B";
+      else if (average >= 70)
+        grade = "C";
+      else if (average >= 60)
+        grade = "D";
+      else
+        grade = "F";
+      return grade;
+    }
+  }
+}

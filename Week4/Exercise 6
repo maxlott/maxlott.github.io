@@ -1,0 +1,65 @@
+/**********************************************
+Exercise: Triangle side lengths
+Write a method IsValidTriangle which takes as its input three non-negative numbers. It should return true if the three numbers could form the side lengths of a triangle and false otherwise.
+
+The arguments don't correspond to specific sides. Don't worry about handling negative inputs - garbage in, garbage out.
+
+For example,
+
+IsValidTriangle(0,0,0) // => false, because a triangle can't have 0-length side
+IsValidTriangle(1,1,1) // => true, an equilateral triangle
+IsValidTriangle(3,4,5) // => true, a right triangle
+IsValidTriangle(4,3,5) // => true, the same right triangle
+IsValidTriangle(5,3,4) // => true, the same right triangle
+IsValidTriangle(10, 10, 100) //=> false, no such triangle exists
+
+You might want to read this Wikipedia article about Pythagorean triples ->> (http://en.wikipedia.org/wiki/Pythagorean_triple)
+***********************************************/
+
+
+
+
+
+
+
+//Initial solution
+
+using System;
+
+namespace Phase0_Exercise6_Triangle_Side_Lengths
+{
+  public class Exercise6TriangleSideLengths
+    {
+      public bool IsVaildTriangle(double a, double b, double c)
+      {
+        if(a * a + b * b + c * c)
+        return true;
+        
+        else 
+        return false;
+      }
+    }
+}
+
+
+
+// Refactored solution (Cheated)
+
+using System;
+
+namespace Phase0_Exercise6_Triangle_Side_Lengths
+{
+  public class Exercise6TriangleSideLengths
+    {
+      public bool IsValidTriangle(double a, double b, double c)
+      {
+        double[] sides = {a, b, c};
+        Array.Sort(sides);
+        if (sides[0] <= 0)
+        {
+          return false;
+        }
+        return sides[0] + sides[1] > sides[2];
+      }
+    }
+}
